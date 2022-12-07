@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 (function () {
 	// Global variables
 	var userAgent = navigator.userAgent.toLowerCase(),
@@ -1450,3 +1450,7 @@
 
 	} );
 }());
+
+$('.carousel').carousel({
+	interval: 2000
+    })
