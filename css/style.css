@@ -600,6 +600,56 @@
 	color: #FFFFFF;
 	
 }
+
+/* ================================================================= */
+
+@media (max-width: 835px){
+	.title-banner > p:nth-child(1){
+		font-size: 35px;
+		color: #FFFFFF;
+		margin-bottom: 10px;
+	}
+	.title-banner > h1{
+		font-size: 50px;
+		color: #FFFFFF;
+		margin-top: -30px;
+	}
+	.title-banner > p:nth-child(3){
+		font-weight: 100 !important;
+		color: #FFFFFF;
+		margin-bottom: 40px;
+		font-size: 13px;
+	}
+	/* Usuarios colegios Paises */
+	.row-content{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-right: -15px;
+		margin-left: -15px;}
+
+	/* Ellos congian en nuestra solución */
+	.customer-logos{
+		width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		margin-top: 40px;
+	}
+
+	/* Como resolvemos */
+	.container-3{
+		gap: 20px;
+	}
+	.count-img{
+		text-align: left !important;
+	}
+	.card{
+		width: 40%;;
+	}
+}
+
+
 /* ================================================================= */
 a:focus,
 button:focus {
@@ -13193,7 +13243,8 @@ html.tablet .ui-to-top {
 .rd-navbar-toggle span:after, .rd-navbar-toggle span:before, .rd-navbar-toggle span {
 	width: 24px;
 	height: 3px;
-	background-color: #151515;
+	/* background-color: #346EB0; */
+	background-color: #89B509;
 	backface-visibility: hidden;
 	border-radius: 0;
 }
@@ -14635,7 +14686,7 @@ html.tablet .ui-to-top {
 
 .rd-navbar-fixed .rd-nav-item:hover .rd-nav-link, .rd-navbar-fixed .rd-nav-item.focus .rd-nav-link, .rd-navbar-fixed .rd-nav-item.active .rd-nav-link, .rd-navbar-fixed .rd-nav-item.opened .rd-nav-link {
 	color: #ffffff;
-	background: #6689ff;
+	background: #346EB0;
 }
 
 .rd-navbar-fixed .rd-nav-item:hover > .rd-navbar-submenu-toggle, .rd-navbar-fixed .rd-nav-item.focus > .rd-navbar-submenu-toggle, .rd-navbar-fixed .rd-nav-item.active > .rd-navbar-submenu-toggle, .rd-navbar-fixed .rd-nav-item.opened > .rd-navbar-submenu-toggle {
