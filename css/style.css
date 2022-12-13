@@ -162,7 +162,9 @@
 .background-2 {
   background-color: #006cb6;
 }
-
+.logos-rs{
+  display: none;
+}
 /* Como resolvemos el problema */
 
 .container-3 {
@@ -604,6 +606,9 @@
   background-color: #98bf44;
   color: #ffffff;
 }
+.footer-2 > span > a{
+  color: #FFF;
+}
 
 /* ================================================================= */
 
@@ -641,7 +646,12 @@
     justify-content: space-around;
     margin-top: 40px;
   }
-
+  /* .logos-desktop{
+    display: none;
+  } */
+  .logos-rs{
+    display: none;
+  }
   /* Como resolvemos */
   .container-3 {
     gap: 20px;
@@ -897,6 +907,15 @@
     font-weight: 800;
     margin-top: 50px;
   }
+  .subtitle-4 {
+    color: #006cb6;
+    font-size: 7vw;
+    font-weight: 800;
+    margin-bottom: -20px !important;
+  }
+  .swiper-container{
+    height: 80vh !important;
+  }
   .btn-info,
   .btn-info:focus {
     font-size: 13px;
@@ -935,6 +954,9 @@
   }
 
   /* Ellos confian en nuestra solución */
+  .conatiner-schools{
+    margin-bottom: 1px !important;
+  }
   .customer-logos {
     width: 100%;
     display: flex;
@@ -942,7 +964,21 @@
     justify-content: space-around;
     margin-top: 40px;
   }
-
+  .btn-next, .btn-prev{
+    border: none;
+  }
+  .logos-desktop{
+    display: none;
+  }
+  .logos-rs{
+    display: block;
+  }
+  .carousel-item{
+    width: 100% !important;
+  }
+  .carousel-item > img{
+    width: 150px!important;
+  }
   /* Como resolvemos */
   .container-3 {
     gap: 20px;
@@ -1089,11 +1125,22 @@
   }
 
   /* Slider nuestros aliados */
+  .container-aliados{
+    margin-bottom: -5px !important;
+  }
   .slider > img {
     width: 90px !important;
     height: auto;
   }
-
+  .customer-logos-aliados{
+    display: none;
+  }
+  .logos-rs{
+    display: block;
+  }
+  .img-aliados > img{
+    width: 180px !important;
+  }
   /* Footer */
   .footer-section {
     width: 100%;
@@ -1112,7 +1159,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    text-align: left;
     padding: 0 30px;
   }
   .section-info > h3 {
@@ -1129,20 +1175,22 @@
     height: 27px;
     margin-right: 5px;
   }
-  .section-info > div > a > img {
-    width: 27px;
-    height: 27px;
-    margin-right: 5px;
-  }
-  .section-info > div > p {
-    display: flex;
-    align-items: center;
-  }
   /* ------------------------------------ */
   .footer-2 {
     width: 100%;
+    height: 65px !important;
     background-color: #98bf44;
     color: #ffffff;
+  }
+  .footer-2 > span{
+    display: block;
+    width: 100% !important;
+    font-size: 12px;
+    font-weight: 100;
+    padding: 10px 0;
+  }
+  .footer-2 > span > a{
+    color: #FFF;
   }
 }
 /* ================================================================= */
