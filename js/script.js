@@ -1926,7 +1926,7 @@ const countries = [
   "Zimbabue",
 ];
 
-const selectCountry = document.getElementById("contact-select");
+const selectCountry = document.getElementById("cars");
 
 for (let country in countries) {
   let option = `<option value=${countries[country]}>${countries[country]}</option>`;
