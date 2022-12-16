@@ -1926,9 +1926,36 @@ const countries = [
   "Zimbabue",
 ];
 
-const selectCountry = document.getElementById("cars");
+const selectCountry = document.getElementById("countries");
 
 for (let country in countries) {
   let option = `<option value=${countries[country]}>${countries[country]}</option>`;
   selectCountry.insertAdjacentHTML("beforeend", option);
+}
+
+
+// Validacion de formulario Contact
+const formContact = document.getElementById("formulario");
+const formNombre = document.getElementById('nombre');
+const formCorreo = document.getElementById('correo');
+const formPaises = document.getElementById('countries');
+const fomrAlert = document.querySelector('.alerta');
+
+formContact.addEventListener("submit", sendMsn);
+
+async function sendMsn(e){
+  e.preventDefault();
+  const formContacto = new FormData(this);
+  const response = await fetch(this.action, {
+    method : this.method,
+    body: formContacto,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  
+  if(response.ok){
+    this.reset();
+    fomrAlert.innerHTML = "Envio exitoso!"
+  } 
 }

@@ -522,6 +522,11 @@
   color: #ffffff;
   font-weight: 600;
   font-size: 1.9vw;
+  margin-bottom: 20px;
+}
+.select-countries{
+  border-radius: 4px;
+  height: 55px;
 }
 
 /* Slider nuestros aliados */
