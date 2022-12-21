@@ -1707,7 +1707,6 @@ $(".carousel").carousel({
   interval: 2000,
 });
 
-
 // Script select
 const countries = [
   "Afganistán",
@@ -1933,29 +1932,44 @@ for (let country in countries) {
   selectCountry.insertAdjacentHTML("beforeend", option);
 }
 
-
 // Validacion de formulario Contact
 const formContact = document.getElementById("formulario");
-const formNombre = document.getElementById('nombre');
-const formCorreo = document.getElementById('correo');
-const formPaises = document.getElementById('countries');
-const fomrAlert = document.querySelector('.alerta');
+const formNombre = document.getElementById("nombre");
+const formCorreo = document.getElementById("correo");
+const formCountry = document.getElementById("countries");
+const formAlert = document.querySelector(".alerta");
 
-formContact.addEventListener("submit", sendMsn);
+formContact.addEventListener("submit", sendContact);
 
-async function sendMsn(e){
+async function sendContact(e) {
   e.preventDefault();
-  const formContacto = new FormData(this);
-  const response = await fetch(this.action, {
-    method : this.method,
-    body: formContacto,
-    headers: {
-      'Accept': 'application/json'
+
+  const regexEmail =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  const inName = formNombre.value.length <= 0;
+  const inEmail = regexEmail.test(formCorreo.value);
+  const inCountry = formCountry.value == "Pais";
+
+  if (inName || !inEmail || inCountry) {
+    formAlert.innerHTML =
+      '<div class="alert alert-primary" role="alert">Llenar todos los campos!</div>';
+  } else {
+    const formContacto = new FormData(this);
+    const response = await fetch(this.action, {
+      method: this.method,
+      body: formContacto,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      this.reset();
+      formAlert.innerHTML =
+        '<div class="alert alert-success" role="alert">Gracias por tu mensaje pronto nos pondremos en contacto</div>';
+    } else {
+      formAlert.innerHTML =
+        '<div class="alert alert-warning" role="alert">Error, intente de nuevo!</div>';
     }
-  })
-  
-  if(response.ok){
-    this.reset();
-    fomrAlert.innerHTML = "Envio exitoso!"
-  } 
+  }
 }
